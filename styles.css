@@ -11,9 +11,12 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+img{
+    max-width: 100%;
+}
 .hero{
     min-height: 100vh;
-    background-image: url("bg.min.png");
+    background-image: url("img/bg.min.png");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -21,11 +24,12 @@ body{
 }
 
 .container{
-    max-width: 90%;
+    max-width: 1200px;
+    width: 90%;
     margin:auto;
 }
 
-.content{
+.hero .content{
     width: 100%;
     height: 100%;;
     display: flex;
@@ -49,7 +53,7 @@ body{
     width: 100%;
     height: 100%;
 }
-.image{
+.hero .image{
     
     width: 100%;
     height: 100%;
@@ -58,12 +62,12 @@ body{
     
 }
 
-.image:hover img{
+.hero .image:hover img{
     
     transform: scale(1.1);
 }
 
-img{
+.hero img{
     max-width: 100%;
     object-position: center;
     transition: .4s ease;
@@ -98,3 +102,127 @@ img{
     transition: .3s ease;
     
 }
+
+/* ------------SERVICES-------------- */
+.services{
+    padding: 60px 0;
+}
+.services .row{
+    width:100%;
+    display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+    align-items: center;
+}
+
+.services .content{
+    width:40%; 
+    padding: 0 5px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+}
+.services .image{
+    width:60%; 
+}
+
+
+.services .content h1{
+    margin:0;
+    padding: 0;
+    padding: 15px 0;
+    color:#EFD31A;
+    font-size: 40px;
+    line-height: 45px;
+}
+.services  span{
+    color: rgb(21, 155, 165);
+    font-weight: normal;
+}
+
+.services .content h1::after{
+    content: "";
+    border: 1px dashed rgb(209, 195, 103);
+    display: block;
+    max-width: 70%;
+    
+    margin-top: 5px;
+}
+
+.services .content p{
+    color: #5a5858;
+    margin-top: 5px;
+}
+.services .content .descrip{
+    color: #5a5858; 
+}
+/* ----------footer-------------- */
+footer{
+    background: #2e2d2d;
+}
+footer .container p{
+    text-align: center;
+    padding: 10px 10px;
+    color:#e6e4e4;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* ------------------------------------
+              MEDIA QUERIES
+---------------------------------------- */
+
+@media screen and (max-width:1075px){
+    .services .content h1{
+        font-size: 30px;
+        line-height: 35px;
+    } 
+}
+
+@media screen and (max-width:768px){
+    .services .row{
+        
+        flex-direction: column;
+        
+    }
+    .services .content{
+        width: 100%;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+
+    .services .image{
+        width: 80%;
+    }
+    .services{
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width:425px){
+    .container-avatar{
+        width: 120px;
+    height: 120px;
+    }
+    .services{
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width:320px){
+ 
+    .services .image{
+        width: 100%;
+        /* margin-top:200px; */ /* pruebaaaaa */
+    }
+    .services .content h1{
+        font-size: 25px;
+        padding-bottom: 5px;
+    }
+    .services .content p{
+        font-size: 15px;
+        
+    }
+}
+
